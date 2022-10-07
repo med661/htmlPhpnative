@@ -22,5 +22,5 @@ Route::get('/show/{Users}', [userController::class, 'show']);
 Route::get('/destroy/{Users}', [userController::class, 'destroy']);
 Route::get('/create', [userController::class, 'create']);
 Route::post('/store', [userController::class, 'store']);
-Route::get('/edit/{personne}', [userController::class, 'edit']);
-Route::put('/update/{personne}', [userController::class, 'update']);
+Route::get('/edit/{Users}', [userController::class, 'edit']);
+Route::put('/update/{Users}', [userController::class, 'update']);
