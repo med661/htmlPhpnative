@@ -1,52 +1,49 @@
 
 <div class="pull-left"><h2>Edit users</h2></div>
 
+<div >
+<div >
+<div >
+<h2>test</h2>
+</div>
+<div class="pull-right">
+<style type="text/css">
+.btn{
+    background-color:yellow;
+     /* some styling here */
+};
+.divtab{
+    display:"flex";
+    justify-content:"center";
 
-<a class="btn btn-
-primary" href="" title="Go back"> <i class="fas fa-backward "></i> </a>
+    align-items: "center";
 
-</div> </div> </div>
-@if ($errors->any())
-<div class="alert alert-danger">
-<strong>Error!</strong>
-<ul> @foreach ($errors->all() as $error)
-<li></li>
-@endforeach </ul> </div>
+}
+     /* some styling here */
+</style>
+<a class="btn btn-success" href="/index" title="Create a Personne">go back <i class="fas fa-plus-
+circle"></i>
+
+</a>
+</div></div></div>
+@if ($message = Session::get('success'))
+<div class="alert alert-success"> <p></p></div>
 @endif
+<div class="divtab">
+{{$Users->nom}}
 <form action="/update/{{$Users->id}}" method="POST">
 @csrf
 @method('PUT')
-<div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>nom:</strong>
-<input type="text" name="nom" value="{{$Users-
->nom}}" class="form-control" placeholder="Name">
-</div> </div>
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>prenom</strong>
 
-<textarea class="form-
-control" style="height:50px" name="prenom"
-
-placeholder="prenom">{{$Users-
->prenom}}</textarea>
-</div> </div>
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>actif</strong>
-
-<input type="number" name="actif" class="form-
-control" placeholder=""
-
-value="{{$Users->actif}}">
-</div>
-</div>
-<input type="hidden" name="idh" value="{{$Users->id}}">
-<div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
+<label for="nom">nom</label>
+<input type="text" name="nom" id="nom" placeholder="nom" value="{{$Users->nom}}"/><br><br>
+<label for="nom">prenom</label>
+<input type="text" name="prenom" id="prenom" placeholder="nom" value="{{$Users->prenom}}"/>
+<br><br>
+<label for="email">email</label>
+<input type="text" name="email" id="email" placeholder="nom" value="{{$Users->email}}"/>
+<br><br>
 <button type="submit" class="btn btn-
 primary">Submit</button>
 
-</div> </div></form>
+</div>

@@ -1,5 +1,7 @@
 <div class="row" >
 
+<div class="row" >
+
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
         <h2> </h2>
@@ -26,14 +28,12 @@
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
-<strong>age</strong>
-{{$Users->age}}
+<strong>email</strong>
+{{$Users->email}}
 </div>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>Date Created</strong>
-{{$Users->created_at}}
+
 </div>
 </div>
 </div>
